@@ -1,15 +1,29 @@
 package isen.m1.gfeltrin;
 
+import java.util.logging.ConsoleHandler;
+
 public class ServerAdmin implements ServerAdminBean{
 
-    enum ServerStatus {STARTING, RUNNING, SHUTTING_DOWN, ERROR};
+    private ConsoleHandler server = null;
+    private String serverStatus;
+    private boolean running;
 
-    public void setStatus(ServerStatus status){
-
+    public void setRunning(boolean b) {
+        this.running = b;
     }
 
-    @Override
-    public String getStatus() {
-        return null;
+    public boolean isRunnig() {
+        return running;
+    }
+    public String getServerStatus() {
+        return serverStatus;
+    }
+
+    public void setServerStatus(String serverStatus) {
+        this.serverStatus = serverStatus;
+    }
+
+    public void shutdown() {
+        server.close();
     }
 }

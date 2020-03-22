@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="my-server-2020" />
         <module name="JavaServer" />
+        <module name="my-server-2020" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="my-app" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
